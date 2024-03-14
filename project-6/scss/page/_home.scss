@@ -1,0 +1,47 @@
+@use '../abstract' as *;
+@use '../base' as *;
+@use '../component' as *;
+@use '../layout' as *;
+@use '../vendor' as *;
+
+body {
+    background: $clr-dark;
+    min-height: 100vh;
+}
+
+.main__wrapper {
+    width: 73%;
+    margin: 0 auto;
+}
+
+.content {
+    width: 100%;
+}
+
+.banner {
+    img {
+        overflow: hidden;
+        position: relative;
+        @include imgCover(100%, 100%);
+        // @include mediaQueryMax(){
+        //     height: 40rem
+        // }
+    }
+
+    h1 {
+        // position: absolute;
+        // bottom: 0;
+        // left: 50%;
+        // transform: translateX(-90%);
+        color: $clr-light;
+        text-transform: uppercase;
+        font-size: 4.5rem;
+        
+    }
+
+
+}
+
+
+
+

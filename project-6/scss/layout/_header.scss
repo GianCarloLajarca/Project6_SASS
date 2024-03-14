@@ -1,0 +1,20 @@
+@use '../abstract' as *;
+
+.header {
+    width: 100%;
+
+        @include flex(space-between, center);
+
+        ul {
+            font-size: 1.9rem;
+            margin-right: 15rem;
+            text-transform: uppercase;
+
+            a {
+                margin-right: 16px;
+            }
+        }
+    
+
+   
+}

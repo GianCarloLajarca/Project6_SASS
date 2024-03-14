@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="main__wrapper">
+        <header class="header">
+            
+                <div class="header__logo">
+                <img src="/images/logo.png" alt="">
+                </div>
+                <ul class="flex gap-2" id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            
+        </header>
+
+        <section class="content">
+
+        <div class="banner">
+            <a href="#">
+             <picture>
+                <source srcset="/images/slider-1.jpg" media="(min-width:460px)">  
+                <img src="/images/slider-1.jpg" alt="">
+             </picture>
+             <h1>Complete Auto Service</h1>
+            </a>
+              <a href="#">
+                 <picture>
+                  <source srcset="/images/slider-2.jpg" media="(min-width:460px)">  
+                 <img src="/images/slider-2.jpg" alt="">
+                   </picture>
+                   <h1>Quality Car Maintenance</h1> 
+                  </a>
+                   <a href="#">
+                   <picture>
+                   <source srcset="/images/slider-3.jpg" media="(min-width:460px)">  
+                     <img src="/images/slider-3.jpg" alt="">
+                    </picture>
+                    <h1>Fair Friendly Service</h1>
+                   </a>
+            </div>
+
+        </section>
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script>
+    var slider = tns({
+    container: '.banner',
+    items: 1,
+    controls: false,
+    autoplayButtonOutput: false,
+    slideBy: 'page',
+    autoplay: false
+  });
+
+    const toggleMenu = document.querySelector("#toggleMenu");
+    const menu = document.querySelector("#menu");
+    const body = document.querySelector("body");
+
+    toggleMenu.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        body.classList.toggle("open");
+    });
+
+  </script>
+
+</body>
+</html>
